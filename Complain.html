@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online FIR System By Aditya Hansda</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css/main.css" <link rel="stylesheet" href="style.css/complain.css" <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+
+
+<body>
+    <nav>
+
+        <div class="logo_section">
+            <img class="fir_logo" src="Image/logo.svg" alt="">
+            <div class="logo_text">
+                <span class="jofs"> ONLINE </span>
+                <span class="logo_name"> FIR SYSTEM </span>
+            </div>
+        </div>
+        <div class="menu_section">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+
+            </ul>
+        </div>
+
+
+        <div class="account_section">
+            <button onclick="location.href = 'Login.html';" class="button-1" role="button">Login</button>
+        </div>
+    </nav>
+
+    <div class="page_title"> <span>Complain form</span></div>
+
+
+    <div class="complain_form">
+
+        <div class="form_box">
+            <form action="#" class="form" method="post">
+                <span style=" font-weight: 800;" class="red_span">कृपया एक नई शिकायत दर्ज करने के लिए नीचे दिए गए फ़ार्म
+                    को भरे / Please fill in the form below to register a new complain </span>
+
+                <br>
+                <br>
+                <span class="Sub_title">Personal Details</span>
+                <hr>
+                <div class="sub_line"></div>
+                <!---------------------------------------------------------------------->
+
+                <div class="Personal_Details">
+                    <div class="input-box">
+                        <label>पूरा नाम/Full Name</label> <span class="red_span">*</span>
+                        <input type="text" placeholder="Full Name" maxlength="30" required />
+                    </div>
+                    <div class="select-box">
+                        <label>लिंग/Gender</label> <span class="red_span">*</span>
+                        <select required>
+                            <option hidden>None</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <!---------------------------------------------------------------------->
+                <div class="addrees">
+                    <span class="Sub_title">Address</span><span class="red_span">*</span>
+                    <hr>
+                    <input " type="text " placeholder="House No. Building Name " maxlength="65 " required>
+                    <br>
+                    <input  " type="text " placeholder="Road name, Area, Colony " maxlength="65 " required>
+                    <br>
+                    <input " type="text " placeholder=" City " maxlength="30 " required>
+                    <br>
+                    <input  " type="number" placeholder="Postal Code " required>
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <!---------------------------------------------------------------------->
+                <div class="contact_details ">
+
+                    <span class="Sub_title ">Contact Details</span><span class="red_span ">*</span>
+                    <hr>
+                    <br>
+
+                    <div>
+                        <div>
+                            <lable>ईमेल/Email Address</lable>
+                            <input type="Email " placeholder="example@gmail.com " required>
+                        </div>
+
+                        <div>
+                            <lable>मोबाइल /Mobile No.</lable>
+                            <input class="phone_number " type="number " placeholder="+91 XXXXX XXXXX " required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+                <br>
+                <!---------------------------------------------------------------------->
+                <div class="identity ">
+                    <span class="Sub_title ">Identity Attachment</span><span class="red_span ">*</span>
+                    <hr>
+                    <br>
+                    <div>
+                        <select>
+                            <option value=" " selected=" ">-Select-</option>
+                            <option value="Passport ">पासपोर्ट/Passport</option>
+                            <option value="Pan Card ">पैन कार्ड/Pan Card</option>
+                            <option value="Driving License ">ड्राइविंग लाइसेंस/Driving License</option>
+                            <option value="Voter Id ">मतदाता पहचान पत्र/Voter Id</option>
+                            <option value="Aadhaar Number ">आधार संख्या/Aadhaar Number</option>
+                            <option value="Employee Card ">कर्मचारी कार्ड/Employee Card</option>
+                            <option value="Other ">बैंक पासबुक/Bank Passbook</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <input type="text " placeholder="Enter Details " maxlength="50 " required>
+                        <input type="file " name="idproof_attachment " id="idproof_attachment " class="id_attachment " onchange="validate_attachment(this) ">
+                    </div>
+                </div>
+                <!---------------------------------------------------------------------->
+
+                <div class="place_of_occurence ">
+                    <span class="Sub_title ">घटना स्थल/Place of Occurence</span><span class="red_span ">*</span>
+                    <hr>
+                    <br>
+
+                    <div>
+                        <label>ज़िला/District*</label>
+                        <br>
+                        <select " style="width: 52.7%; ">
+                    <option value=" " selected>-Select-</option>
+                    <option value="3 ">Bokaro District</option>
+                    <option value="4 ">Chatra District</option>
+                    <option value="5 ">Deoghar District</option>
+                    <option value="6 ">Dhanbad District</option>
+                    <option value="7 ">Dumka District</option>
+                    <option value="8 ">East Singhbhum District</option>
+                    <option value="9 ">Garhwa District</option>
+                    <option value="10 ">Giridih District</option>
+                    <option value="11 ">Godda District</option>
+                    <option value="12 ">Gumla District</option>
+                    <option value="13 ">Hazaribagh District</option>
+                    <option value="14 ">Jamtara District</option>
+                    <option value="15 ">Khunti District</option>
+                    <option value="16 ">Koderma District</option>
+                    <option value="17 ">Latehar District</option>
+                    <option value="18 ">Lohardaga District</option>
+                    <option value="19 ">Pakur District</option>
+                    <option value="20 ">Palamu District</option>
+                    <option value="28 ">Rail Dhanbad</option>
+                    <option value="29 ">Rail Jamshedpur</option>
+                    <option value="21 ">Ramgarh District</option>
+                    <option value="22 ">Ranchi District</option>
+                    <option value="23 ">Sahibganj District</option>
+                    <option value="24 ">Saraikela District</option>
+                    <option value="25 ">Simdega District</option>
+                    <option value="26 ">West Singhbhum District</option>
+                    </select>
+
+                </div>
+
+                <div>
+                    <lable>Occurence Details</lable> <br>
+                    <input type="text " placeholder="Details name " placeofoccurence " id="placeofoccurence " size="13 " maxlength="50 " style="width: 50%; ">
+                    </div>
+                </div>
+
+                <!----------------------------------------------------------------------->
+                <div class="Complain_Details "> </div>
+                <span class="Sub_title ">Complain Details</span><span class="red_span ">*</span>
+                <hr>
+                <br>
+
+                <div>
+                    <lable>विषय/Topic*</lable>
+                    <br>
+                    <select>
+                        <option value=" " selected>-Select-</option>
+                        <option value="1 ">अपराध संबंधित/Crime Related</option>
+                        <option value="2 ">साइबर संबंधित/Cyber Related</option>
+                        <option value="3 ">अन्य /Others/Miscellaneous</option>
+                    </select>
+
+                </div>
+
+                <div>
+                    <label>विषय-वस्तु</span>/Subject</label><span class="red_span ">*</span>
+                    <br>
+                    <input type="text " name="subject " placeholder="Subject" id="subject " maxlength="120 " value=" " class="form-control input-sm " required>
+                </div>
+
+                <div>
+                    <label>विवरण</span>/Details</label><span class="red_span ">*</span> <br>
+                    <textarea name="message " id="message " rows="5 " class="form-control input-sm " style="width: 100% ; " required></textarea>
+                </div>
+                <span style="color: red;   font-weight: 800; ">(*) marked fileds are mandatory.
+                    Kindly Do Not Refresh or Reload this page.</span>
+                <br>
+                <br>
+
+                <button id="Submit_btn" type="submit_btn" class="button-1 " role="button"><span class="material-symbols-rounded">
+done </span>Submit</button>
+
+                <button onclick="window.print();return false;" id="print" type="print" class="button-1"> <span class="material-symbols-rounded">print
+                    </span> Print Form</button>
+            </form>
+
+
+
+
+        </div>
+    </div>
+    <footer>
+        <span class="version "> <a href="https://github.com ">BETA 1.0v Lastupdate - 04:51PM 10-12-2023</a> </span>
+        <span class="made "> <a href="https://bento.me/adityahansda ">Made❤️By Aditya Hansda </a></span>
+    </footer>
+
+</body>
+
+
+
+
+<script>
+    if (window.history && history.pushState) { // check for history api support
+        window.addEventListener('load', function() {
+
+            // create history states
+            history.pushState(-1, null); // back state
+            history.pushState(0, null); // main state
+            history.pushState(1, null); // forward state
+            history.go(-1); // start in the main state
+
+            this.addEventListener('popstate', function(event, state) {
+                // check history state and fire custom events
+                if (state = event.state) {
+
+                    event = document.createEvent('Event');
+                    event.initEvent(state > 0 ? 'next' : 'previous', true, true);
+                    this.dispatchEvent(event);
+
+                    var r = confirm("Would you like to go back?");
+                    if (r == true) {
+                        // Redirect to another page
+                        window.location.href = 'index.html'; // Replace with your desired URL
+
+                    } else {
+                        // Do nothing or handle differently if "Cancel" is clicked
+                        // Reset state
+                        history.go(-state);
+                    }
+                }
+            }, false);
+        }, false);
+    }
+</script>
+
+
+
+</html>
