@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online FIR System By Aditya Hansda</title>
+    <link rel="stylesheet" href="style.css/login.css">
+
+</head>
+
+<body>
+    <form class="form">
+        <div class="flex-column">
+            <label>Forgot Password/Registration No.</label></div>
+        <label>Email</label>
+        <div class="inputForm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+              </svg>
+            <input type="number" class="input" placeholder="Enter you email" maxlength="5">
+        </div>
+
+        <div class="flex-column">
+            <label>OTP</label>
+        </div>
+        <div class="inputForm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-app-indicator" viewBox="0 0 16 16">
+                <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z"/>
+                <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+              </svg>
+            <input type="password" class="input" placeholder="Enter OTP" maxlength="5">
+            <span id="send" class="span"> Send </span>
+        </div>
+
+        <div class="flex-row">
+
+            <span class="span">Forgot password?</span>
+            <span id="timer" style=" display: none;">Wait 2:00 </span>
+        </div>
+        <button id="submit" class="button-submit">Login In</button>
+        <p class="p">Don't have an account? <span class="span"><a href="Complain.html">Register</a></span>
+
+        </p>
+
+    </form>
+</body>
+
+<script>
+    var timer = document.getElementById('timer');
+
+    document.getElementById('send').addEventListener('click', function() {
+        this.textContent = 'Resend';
+        this.style.pointerEvents = 'none';
+        this.style.color = 'gray';
+        if (timer.style.display === 'none') {
+            timer.style.display = 'block';
+        }
+
+        setTimeout(function() {
+            document.getElementById('send').style.pointerEvents = 'auto';
+            document.getElementById('send').textContent = 'Send';
+
+
+            var timer = document.getElementById('timer');
+
+            if (timer.style.display === 'block') {
+                timer.style.display = 'none';
+                send.style.color = '#2d79f3';
+            }
+
+        }, 1000); // 120000 milliseconds = 2 minutes
+
+    });
+</script>
+
+
+</html>

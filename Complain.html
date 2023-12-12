@@ -104,6 +104,15 @@
                             <lable>मोबाइल /Mobile No.</lable>
                             <input class="phone_number " type="number " placeholder="+91 XXXXX XXXXX " required>
                         </div>
+
+                        <div>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" minlength="8" required placeholder="Password">
+                        </div>
+                        <div>
+                            <label for="confirmPassword">Confirm Password:</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm Password">
+                        </div>
                     </div>
 
                 </div>
@@ -237,6 +246,67 @@ done </span>Submit</button>
 
 
 <script>
+    document.getElementById('password').addEventListener('blur', function() {
+
+        validatePassword(this);
+
+    });
+
+    document.getElementById('confirmPassword').addEventListener('blur', function() {
+
+        validatePassword(this);
+
+
+    });
+
+    function validatePassword(input) {
+        var passwordInput = document.getElementById('password');
+        var confirmPasswordInput = document.getElementById('confirmPassword');
+
+        var password = passwordInput.value;
+        var confirmPassword = confirmPasswordInput.value;
+
+        // Regular expressions for checking conditions
+        var hasNumber = /\d/.test(password);
+        var hasSymbol = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+        if (password == '') {
+
+            alert('Please Enter Password');
+        } else {
+
+            if (password.length >= 8 && hasNumber && hasSymbol) {
+                input.style.border = '2px solid red'; // Reset the border style
+                if (password !== confirmPassword) {
+
+                    if (confirmPassword == '') {
+
+                    } else {
+                        alert('pass not match.');
+
+                    }
+
+                } else {
+                    passwordInput.style.border = '2px solid green';
+                    password.style.border = '2px solid green';
+                    // Continue with form submission or other actions
+                }
+            } else {
+                input.style.border = '2px solid red'; // Set the border style
+                alert('Password must be at least 8 characters long and contain at least one number and one symbol (!@#$%^&*(),.?":{}|<>).');
+            }
+        }
+
+
+    }
+
+    function submitForm() {
+        // This function can be used for the actual form submission logic
+        alert('Form submitted successfully!');
+    }
+
+
+    /*--------------Backfuntion -------------------------*/
     if (window.history && history.pushState) { // check for history api support
         window.addEventListener('load', function() {
 
