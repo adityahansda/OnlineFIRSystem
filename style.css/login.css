@@ -15,6 +15,7 @@ monospace;
                     -webkit-appearance: none;
                     margin: 0;
                 }
+                text-decoration: none;
             }
             
             body {
